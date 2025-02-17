@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<h2>
+{% block title %}
+Úspěšně přihlášen
+{% endblock %}
+</h2>
+
+<main>
+
+    {% if user == "Lukas" and heslo == "Lukas123" %}
+    <h3>Uspesne prihlaseni uzivatele {{ username }}</h3>
+    {% elif user == "Lukas" %}
+    <h3>spatne heslo</h3>
+    {% else %}
+    <h3>Neplatny uzivatel</h3>
+    {% endif %}
+</main>
+{% endblock %}
