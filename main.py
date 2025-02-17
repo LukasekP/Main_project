@@ -9,8 +9,8 @@ def base():
 @app.route('/addBook', methods=['GET', 'POST'])
 def link():
     if request.method == 'POST':
-        name = request.form['user']
-        description = request.form['heslo']
+        name = request.form['name']
+        description = request.form['description']
         radio = request.form['radio']
         return render_template("base.html", name=name, description=description, radio=radio)
     return render_template("addBook.html")
