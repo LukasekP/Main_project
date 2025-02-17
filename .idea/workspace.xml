@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8465976b-787d-40dc-be09-bfe313441ad8" name="Changes" comment="Formulář na přihlášení a zakladní menu">
+    <list default="true" id="8465976b-787d-40dc-be09-bfe313441ad8" name="Changes" comment="Přidán uživatel Lukas, backend formuláře na přihlášení">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +71,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1739793893043</updated>
-      <workItem from="1739793894101" duration="2968000" />
+      <workItem from="1739793894101" duration="4430000" />
     </task>
     <task id="LOCAL-00001" summary="první commit">
       <option name="closed" value="true" />
@@ -109,7 +113,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739796842651</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Přidán uživatel Lukas, backend formuláře na přihlášení">
+      <option name="closed" value="true" />
+      <created>1739797407896</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1739797407896</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -132,7 +144,8 @@
     <MESSAGE value="CSS linknuto" />
     <MESSAGE value="Formulář na přidání knihy" />
     <MESSAGE value="Formulář na přihlášení a zakladní menu" />
-    <option name="LAST_COMMIT_MESSAGE" value="Formulář na přihlášení a zakladní menu" />
+    <MESSAGE value="Přidán uživatel Lukas, backend formuláře na přihlášení" />
+    <option name="LAST_COMMIT_MESSAGE" value="Přidán uživatel Lukas, backend formuláře na přihlášení" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Main_project$main.coverage" NAME="main Coverage Results" MODIFIED="1739795187213" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
