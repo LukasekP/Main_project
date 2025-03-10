@@ -5,5 +5,5 @@ CREATE TABLE users (int id PRIMARY KEY,
 
 INSERT INTO users (username, email, password) VALUES
     ("admin", "admin@email.com", "admin123"),
-    ("user","user@email.com", "user123"),
+    ("user", "user@email.com", "user123"),
     ("test","test@email.com", "test123");
