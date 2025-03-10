@@ -10,9 +10,12 @@
 <body>
     <nav>
         <ul>
-            <li><a href="/login">Přihlásit se</a></li>
-            <li><a href="/addBook">Přidat knihu</a></li>
-        </ul>
+    <li><a href="{{ url_for('login.login') }}">Přihlásit se</a></li>
+            <li><a href="{{ url_for('login.user_list') }}">Users</a></li>
+
+</ul>
+
+
     </nav>
 
 
