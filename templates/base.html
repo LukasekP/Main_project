@@ -8,16 +8,18 @@
     <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
-    <nav>
-        <ul>
+<nav>
+    <ul>
+        {% if session["username"] %}
+            <li><a href="{{ url_for('login.logout') }}">Logout</a></li>
+            <li><a href="{{ url_for('login.post') }}">Post</a></li>
+        {% else %}
             <li><a href="{{ url_for('login.login') }}">Přihlásit se</a></li>
-            <li><a href="{{ url_for('login.user_list') }}">Users</a></li>
-            <li><a href="{{url_for('login.register')}}">Registration</a></li>
-            {% if 'username' in session %}
-                <li><a href="{{url_for('login.post')}}">Post</a></li>
-            {% endif %}
-        </ul>
-    </nav>
+            <li><a href="{{ url_for('login.register') }}">Registration</a></li>
+        {% endif %}
+    </ul>
+</nav>
+
 
 {% with messages = get_flashed_messages(with_categories=True) %}
     {% if messages %}

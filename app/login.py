@@ -56,6 +56,7 @@ def user_list():
 @bp.route('/logout')
 def logout():
     session.pop('username', None)
+    flash("Odhlášen")
     return redirect(url_for('login.login'))
 
 @bp.route('/post')
