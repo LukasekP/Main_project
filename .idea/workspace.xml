@@ -7,9 +7,7 @@
     <list default="true" id="8465976b-787d-40dc-be09-bfe313441ad8" name="Changes" comment="bp library">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/library.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/library.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/library.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/library.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/login.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/login.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +92,8 @@
       <workItem from="1740398600867" duration="5533000" />
       <workItem from="1741593061039" duration="11337000" />
       <workItem from="1742802365619" duration="5961000" />
-      <workItem from="1742820660862" duration="1078000" />
+      <workItem from="1742820660862" duration="1298000" />
+      <workItem from="1742821971157" duration="938000" />
     </task>
     <task id="LOCAL-00001" summary="první commit">
       <option name="closed" value="true" />
@@ -192,7 +191,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742808323053</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="bp library">
+      <option name="closed" value="true" />
+      <created>1742821944763</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1742821944763</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -224,6 +231,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="bp library" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Main_project$main.coverage" NAME="main Coverage Results" MODIFIED="1742821701489" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Main_project$main.coverage" NAME="main Coverage Results" MODIFIED="1742822028706" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

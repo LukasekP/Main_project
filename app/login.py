@@ -1,3 +1,5 @@
+from functools import wraps
+
 from flask import Blueprint, request, flash, render_template, Flask, session, redirect, url_for
 
 from app.db import db_execute
@@ -61,3 +63,12 @@ def post():
         flash('Musíte být přihlášeni, abyste mohli zobrazit tuto stránku.', 'warning')
         return redirect(url_for('login.login'))
     return render_template('post.html')
+
+def login_required(func):
+    @wraps(func)
+    def wrapper(*args, **kwargs):
+        if "username" not in session:
+            flash("sekce pro přihlášený uživatele", "warning")
+            return redirect(url_for('login.login'))
+        return func(*args, **kwargs)
+    return wrapper
