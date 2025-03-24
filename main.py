@@ -1,4 +1,4 @@
-from app import app, login
+from app import app, login, library
 from app.db import create_db
 from os import path
 
@@ -9,6 +9,6 @@ if __name__ == '__main__':
         print("inicializace database")
 
 app.register_blueprint(login.bp)
+app.register_blueprint(library.bp)
+app.run(debug=True)
 
-if __name__ == '__main__':
-    app.run(debug=True)

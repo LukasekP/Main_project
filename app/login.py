@@ -24,10 +24,6 @@ def login():
 
 @bp.route('/register', methods=['GET', 'POST'])
 def register():
-    """
-    Funkce pro registraci uživatele
-    bere si to z formuláře a ukládá to do databáze uživatelů
-    """
     if request.method == 'POST':
         username = request.form['username']
         email = request.form['email']
@@ -56,7 +52,7 @@ def user_list():
 @bp.route('/logout')
 def logout():
     session.pop('username', None)
-    flash("Odhlášen")
+    flash("Odhlášen.")
     return redirect(url_for('login.login'))
 
 @bp.route('/post')
