@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>
+    {% block title %}
+    Registrace
+    {% endblock %}
+</h2>
+
+<form method="POST">
+    <label>Uživatelské jméno:
+        <input type="text" name="username" required>
+    </label>
+    <br /><br />
+    <label>e-mail:
+        <input type="text" name="email" required>
+    </label>
+    <br /><br />
+    <label>Heslo:
+        <input type="password" name="password" required>
+    </label>
+    <br /><br />
+    <label>Potvrdit heslo:
+        <input type="password" name="confirm_password" required>
+    </label>
+    <br /><br />
+    <button type="submit">Odeslat</button>
+</form>
+{% endblock %}
