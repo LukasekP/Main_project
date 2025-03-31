@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8465976b-787d-40dc-be09-bfe313441ad8" name="Changes" comment="pridano css formularu, navigace a paticky">
-      <change beforePath="$PROJECT_DIR$/app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/__init__.py" afterDir="false" />
-    </list>
+    <list default="true" id="8465976b-787d-40dc-be09-bfe313441ad8" name="Changes" comment="pridani komentare do souboru library.py" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -93,7 +91,7 @@
       <workItem from="1742802365619" duration="5961000" />
       <workItem from="1742820660862" duration="1298000" />
       <workItem from="1742821971157" duration="1424000" />
-      <workItem from="1743403712775" duration="2665000" />
+      <workItem from="1743403712775" duration="2995000" />
     </task>
     <task id="LOCAL-00001" summary="první commit">
       <option name="closed" value="true" />
@@ -223,7 +221,31 @@
       <option name="project" value="LOCAL" />
       <updated>1743406562810</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="pridani komentare do souboru __init__.py">
+      <option name="closed" value="true" />
+      <created>1743406838172</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1743406838172</updated>
+    </task>
+    <task id="LOCAL-00018" summary="pridani komentare do souboru db.py">
+      <option name="closed" value="true" />
+      <created>1743406978362</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1743406978362</updated>
+    </task>
+    <task id="LOCAL-00019" summary="pridani komentare do souboru library.py">
+      <option name="closed" value="true" />
+      <created>1743407084518</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1743407084518</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -254,9 +276,12 @@
     <MESSAGE value="bp library" />
     <MESSAGE value="prokurator" />
     <MESSAGE value="pridano css formularu, navigace a paticky" />
-    <option name="LAST_COMMIT_MESSAGE" value="pridano css formularu, navigace a paticky" />
+    <MESSAGE value="pridani komentare do souboru __init__.py" />
+    <MESSAGE value="pridani komentare do souboru db.py" />
+    <MESSAGE value="pridani komentare do souboru library.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="pridani komentare do souboru library.py" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Main_project$main.coverage" NAME="main Coverage Results" MODIFIED="1743404672466" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Main_project$main.coverage" NAME="main Coverage Results" MODIFIED="1743407060990" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
