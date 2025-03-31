@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>
+    {% block title %}
+    Přidat knihu
+    {% endblock %}
+</h2>
+
+<form method="POST">
+    <label>Název knihy:
+        <input type="text" name="name" required>
+    </label>
+    <br /><br />
+    <label>Jméno autora:
+        <input type="text" name="author" required>
+    </label>
+    <label>Počet stránek:
+        <input type="number" name="pages" required>
+    </label>
+    <br /><br />
+    <button type="submit">Odeslat</button>
+</form>
+
+<main>
+
+</main>
+{% endblock %}

@@ -18,14 +18,14 @@ Moje knihovna
         <tbody>
             {% for book in books %}
             <tr>
-                <td>{{ book['name'] }}</td>
-                <td>{{ book['author'] }}</td>
-                <td>{{ book['pages'] }}</td>
+                <td>{{ book[0] }}</td>  <!-- name -->
+                <td>{{ book[1] }}</td>  <!-- author -->
+                <td>{{ book[2] }}</td>  <!-- pages -->
             </tr>
             {% endfor %}
         </tbody>
     </table>
 {% else %}
-    <div>Ve vaší knihovně zatím nejsou žádné knihy.</div>
+    <p>Nemáte žádné knihy</p>
 {% endif %}
 {% endblock %}

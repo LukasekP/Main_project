@@ -8,7 +8,7 @@ Attributes:
     SECRET_KEY: Tajný klíč pro zabezpečení session cookies a dalších bezpečnostních funkcí
     DATABASE: Cesta k SQLite databázovému souboru
 """
-app.config["SECRET_KEY"] = "dev"  # V produkci nahradit skutečným tajným klíčem
+app.config["SECRET_KEY"] = "dev"
 app.config["DATABASE"] = "database.sqlite"
 
 

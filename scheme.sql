@@ -9,9 +9,13 @@ INSERT INTO users (username, email, password) VALUES
     ("test","test@email.com", "test123");
 
 
-CREATE TABLE books (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    name VARCHAR NOT NULL,
-    author VARCHAR NOT NULL,
-    pages INTEGER,
-);
+CREATE TABLE books (id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    name VARCHAR NOT NULL,
+                    author VARCHAR NOT NULL,
+                    pages INTEGER);
+
+
+INSERT INTO books (name, author, pages) VALUES
+    ("kniha1", "autor1", 123),
+    ("kniha2", "autor2", 234),
+    ("kniha3", "autor3", 345);

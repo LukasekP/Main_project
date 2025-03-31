@@ -1,7 +1,6 @@
 import sqlite3
 
-DB_PATH = 'database.sqlite'
-
+DB_PATH = 'database.sqlite' """ tady je prev neco v neporadku"""
 
 def connect_db(db_path=DB_PATH):
     """Vytvoří a vrátí připojení k SQLite databázi

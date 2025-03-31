@@ -67,17 +67,6 @@ def register():
     return render_template('register.html')
 
 
-@bp.route('/users')
-def user_list():
-    """Zobrazí seznam všech uživatelů
-
-    Returns:
-        str: Vyrenderovaná šablona user.html s daty uživatelů
-    """
-    command = "SELECT username, password FROM users"
-    result = db_execute(command)
-    return render_template("user.html", result=result)
-
 
 @bp.route('/logout')
 def logout():
@@ -90,18 +79,6 @@ def logout():
     flash("Odhlášen.")
     return redirect(url_for('login.login'))
 
-
-@bp.route('/post')
-def post():
-    """Ukázková stránka vyžadující přihlášení
-
-    Returns:
-        str: Vyrenderovaná šablona post.html nebo přesměrování na login
-    """
-    if 'username' not in session:
-        flash('Musíte být přihlášeni, abyste mohli zobrazit tuto stránku.', 'warning')
-        return redirect(url_for('login.login'))
-    return render_template('post.html')
 
 
 def login_required(func):
