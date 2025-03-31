@@ -20,15 +20,7 @@
     <button type="submit">Odeslat</button>
 </form>
 
-{% if username is not none and password is not none %}
 <main>
-    {% if username == "Lukas" and password == "Lukas123" %}
-    <h3>Úspěšné přihlášení uživatele {{ username }}</h3>
-    {% elif username == "Lukas" %}
-    <h3>Špatné heslo</h3>
-    {% else %}
-    <h3>Neplatný uživatel</h3>
-    {% endif %}
+
 </main>
-{% endif %}
 {% endblock %}
