@@ -13,6 +13,7 @@
             <li><a href="{{ url_for('index') }}">Domů</a></li>
         {% if session["username"] %}
             <li><a href="{{ url_for('library.index') }}">Knihovna</a></li>
+
             <li><a href="{{ url_for('login.logout') }}">Odhlásit se</a></li>
         {% else %}
             <li><a href="{{ url_for('login.login') }}">Přihlásit se</a></li>

@@ -1,10 +1,31 @@
 {% extends "base.html" %}
 {% block content %}
-<h2>
+<h1>
 {% block title %}
-    Knihovna
+Moje knihovna
 {% endblock %}
-</h2>
+</h1>
 
-
+{% if books %}
+    <table class="table table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th>Název</th>
+                <th>Autor</th>
+                <th>Počet stran</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for book in books %}
+            <tr>
+                <td>{{ book['name'] }}</td>
+                <td>{{ book['author'] }}</td>
+                <td>{{ book['pages'] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% else %}
+    <div>Ve vaší knihovně zatím nejsou žádné knihy.</div>
+{% endif %}
 {% endblock %}
