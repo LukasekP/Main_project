@@ -14,29 +14,29 @@ bp = Blueprint('login', __name__, url_prefix='/login')
 
 @bp.route('/', methods=['GET', 'POST'])
 def login():
-    """Zpracuje přihlašovací formulář
-
-    Pro GET požadavek zobrazí přihlašovací stránku.
-    Pro POST požadavek ověří přihlašovací údaje.
-
-    Returns:
-        str: Vyrenderovaná šablona login.html nebo index.html po úspěšném přihlášení
-    """
+    """Zpracuje přihlašovací formulář"""
     if request.method == 'POST':
         username = request.form['username']
         password = request.form['password']
 
-        command = "SELECT username from users where username = ? and password = ?"
-        result = db_execute(command, (username, password))
+        # Upravený dotaz - explicitně vybíráme potřebné sloupce
+        command = "SELECT id, username, role, password FROM users WHERE username = ?"
+        result = db_execute(command, (username,))
+
         if result:
-            session['username'] = username
-            flash('Úspěšné přihlášení.', 'success')
-            return render_template("index.html", username=username, password=password)
+            # Ověření hesla
+            if result[0][3] == password:
+                session['id'] = result[0][0]
+                session['username'] = result[0][1]
+                session['role'] = result[0][2]
+                flash('Úspěšné přihlášení.', 'success')
+                return redirect(url_for('index'))
+            else:
+                flash('Špatné jméno nebo heslo.', 'danger')
         else:
-            flash('Špatné jméno nebo heslo.', 'danger')
+            flash('Uživatel neexistuje.', 'danger')
 
     return render_template("login.html")
-
 
 @bp.route('/register', methods=['GET', 'POST'])
 def register():
@@ -53,13 +53,13 @@ def register():
         email = request.form['email']
         password = request.form['password']
         confirm_password = request.form['confirm_password']
-
+        user = "user"
         if password != confirm_password:
             flash('Hesla se neshodují!', 'warning')
         else:
             try:
-                command = "INSERT INTO users (username, email, password) VALUES (?, ?, ?)"
-                db_execute(command, (username, email, password))
+                command = "INSERT INTO users (username, email, password, role) VALUES (?, ?, ?, ?)"
+                db_execute(command, (username, email, password, user))
                 flash('Registrace byla úspěšná!', 'success')
             except Exception as e:
                 flash(f'Chyba při registraci: {str(e)}', 'danger')
@@ -76,6 +76,7 @@ def logout():
         Response: Přesměrování na přihlašovací stránku
     """
     session.pop('username', None)
+    session.pop('role', None)
     flash("Odhlášen.")
     return redirect(url_for('login.login'))
 
@@ -99,3 +100,14 @@ def login_required(func):
         return func(*args, **kwargs)
 
     return wrapper
+
+
+@bp.route('/users')
+def user_list():
+    """Zobrazí seznam všech uživatelů
+    Returns:
+        str: Vyrenderovaná šablona user.html s daty uživatelů
+    """
+    command = "SELECT username, password, role FROM users"
+    users = db_execute(command)
+    return render_template("user.html", users=users)

@@ -14,6 +14,9 @@
         {% if session["username"] %}
             <li><a href="{{ url_for('library.index') }}">Knihovna</a></li>
             <li><a href="{{ url_for('library.addbook') }}">Přidat knihu</a></li>
+        {% if session["role"] == "admin" %}
+                <li><a href="{{ url_for('login.user_list') }}">Uživatelé</a></li>
+        {% endif %}
             <li><a href="{{ url_for('login.logout') }}">Odhlásit se</a></li>
         {% else %}
             <li><a href="{{ url_for('login.login') }}">Přihlásit se</a></li>

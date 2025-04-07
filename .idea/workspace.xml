@@ -4,17 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8465976b-787d-40dc-be09-bfe313441ad8" name="Changes" comment="pridani tabulky books do databaze">
-      <change afterPath="$PROJECT_DIR$/templates/addbook.html" afterDir="false" />
+    <list default="true" id="8465976b-787d-40dc-be09-bfe313441ad8" name="Changes" comment="formular na pridani knih">
+      <change afterPath="$PROJECT_DIR$/templates/user.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/db.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/db.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/library.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/library.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/login.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/login.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scheme.sql" beforeDir="false" afterPath="$PROJECT_DIR$/scheme.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/library.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/library.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/user.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +104,9 @@
       <workItem from="1742820660862" duration="1298000" />
       <workItem from="1742821971157" duration="1424000" />
       <workItem from="1743403712775" duration="2995000" />
-      <workItem from="1743418861285" duration="5423000" />
+      <workItem from="1743418861285" duration="5491000" />
+      <workItem from="1744008583376" duration="5618000" />
+      <workItem from="1744023529980" duration="4989000" />
     </task>
     <task id="LOCAL-00001" summary="první commit">
       <option name="closed" value="true" />
@@ -268,7 +268,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743420137144</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="formular na pridani knih">
+      <option name="closed" value="true" />
+      <created>1743424417242</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1743424417242</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -303,9 +311,10 @@
     <MESSAGE value="pridani komentare do souboru db.py" />
     <MESSAGE value="pridani komentare do souboru library.py" />
     <MESSAGE value="pridani tabulky books do databaze" />
-    <option name="LAST_COMMIT_MESSAGE" value="pridani tabulky books do databaze" />
+    <MESSAGE value="formular na pridani knih" />
+    <option name="LAST_COMMIT_MESSAGE" value="formular na pridani knih" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Main_project$main.coverage" NAME="main Coverage Results" MODIFIED="1743422941893" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Main_project$main.coverage" NAME="main Coverage Results" MODIFIED="1744027324705" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

@@ -20,16 +20,10 @@ bp = Blueprint('library', __name__,
 @bp.route('/')
 @login_required
 def index():
-    """Zobrazí hlavní stránku knihovny
-
-    Požaduje přihlášení uživatele (@login_required).
-    Vrací vyrenderovanou šablonu library.html.
-
-    Returns:
-        str: Vyrenderovaná HTML šablona library.html
-    """
-    command = "SELECT name, author, pages FROM books"
-    books = db_execute(command)
+    """Zobrazí knihy aktuálně přihlášeného uživatele"""
+    user_id = session["id"]
+    command = "SELECT name, author, pages FROM books WHERE user_id = ?"
+    books = db_execute(command, (user_id,))
     return render_template("library.html", books=books)
 
 
@@ -42,13 +36,16 @@ def addbook():
     Pokud je metoda POST, přidá knihu do databáze.
     Vrací šablonu addbook.html.
     """
+    if 'user_id' not in session:
+        return redirect(url_for('login.login'))
     if request.method == 'POST':
         name = request.form['name']
         author = request.form['author']
         pages = request.form['pages']
+        user_id = session['id']
 
-        command = "INSERT INTO books (name, author, pages) VALUES (?, ?, ?)"
-        db_execute(command, (name, author, pages))
+        command = "INSERT INTO books (name, author, pages, user_id) VALUES (?, ?, ?, ?)"
+        db_execute(command, (name, author, pages, user_id))
         flash('Kniha byla úspěšně přidána!', 'success')
         return redirect(url_for('library.index'))
 

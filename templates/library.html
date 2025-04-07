@@ -7,24 +7,24 @@ Moje knihovna
 </h1>
 
 {% if books %}
-    <table class="table table-striped">
-        <thead class="thead-dark">
-            <tr>
-                <th>Název</th>
-                <th>Autor</th>
-                <th>Počet stran</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for book in books %}
-            <tr>
-                <td>{{ book[0] }}</td>  <!-- name -->
-                <td>{{ book[1] }}</td>  <!-- author -->
-                <td>{{ book[2] }}</td>  <!-- pages -->
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+<table class="table table-striped">
+    <thead class="thead-dark">
+        <tr>
+            <th>Název</th>
+            <th>Autor</th>
+            <th>Počet stran</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for book in books %}
+        <tr>
+            <td>{{ book[0] }}</td>
+            <td>{{ book[1] }}</td>
+            <td>{{ book[2] }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
 {% else %}
     <p>Nemáte žádné knihy</p>
 {% endif %}
