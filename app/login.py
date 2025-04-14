@@ -102,12 +102,57 @@ def login_required(func):
     return wrapper
 
 
-@bp.route('/users')
+@bp.route('/user_list')
+@login_required
 def user_list():
-    """Zobrazí seznam všech uživatelů
-    Returns:
-        str: Vyrenderovaná šablona user.html s daty uživatelů
-    """
-    command = "SELECT username, password, role FROM users"
+    """Zobrazí seznam uživatelů (kromě adminů)"""
+    command = "SELECT id, username, password, role FROM users WHERE role != 'admin'"
     users = db_execute(command)
     return render_template("user.html", users=users)
+
+
+@bp.route('/delete_user/<int:user_id>', methods=['POST'])
+@login_required
+def delete_user(user_id):
+    """Smaže uživatele"""
+    # Zabránit smazání admina (pro jistotu)
+    command = "SELECT role FROM users WHERE id = ?"
+    user = db_execute(command, (user_id,))
+
+    if user and user[0][0] != 'admin':
+        command = "DELETE FROM users WHERE id = ?"
+        db_execute(command, (user_id,))
+        flash('Uživatel byl úspěšně smazán.', 'success')
+    else:
+        flash('Nelze smazat tohoto uživatele.', 'danger')
+
+    return redirect(url_for('login.user_list'))
+
+
+@bp.route('/edit_user/<int:user_id>', methods=['GET', 'POST'])
+@login_required
+def edit_user(user_id):
+    """Upraví uživatele"""
+    if request.method == 'POST':
+        new_username = request.form['username']
+        new_password = request.form['password']
+
+        if new_password:
+            command = "UPDATE users SET username = ?, password = ? WHERE id = ?"
+            db_execute(command, (new_username, new_password, user_id))
+        else:
+            command = "UPDATE users SET username = ? WHERE id = ?"
+            db_execute(command, (new_username, user_id))
+
+        flash('Uživatel byl úspěšně upraven.', 'success')
+        return redirect(url_for('login.user_list'))
+
+    command = "SELECT username, password, role FROM users WHERE id = ?"
+    user = db_execute(command, (user_id,))
+
+    if not user:
+        flash('Uživatel neexistuje.', 'error')
+        return redirect(url_for('login.user_list'))
+
+    # Vrátíme uživatele, ale bez hesla (kvůli bezpečnosti)
+    return render_template("edit_user.html", user=(user[0][0], '', user[0][2]))

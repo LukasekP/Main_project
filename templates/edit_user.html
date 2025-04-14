@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+<h2>
+{% block head %}
+Editace uživatele
+{% endblock %}
+</h2>
+{% block content %}
+<div id="content">
+    <div class="card shadow-sm edit-user-container">
+        <div class="card-header edit-user-header">
+            <h2>Editace uživatele</h2>
+        </div>
+
+        <div class="card-body edit-user-body">
+            <form method="POST">
+                <div class="edit-user-form-group">
+                    <label for="username" class="edit-user-label">
+                        Uživatelské jméno
+                    </label>
+                    <input type="text" id="username" name="username" value="{{ user[0] }}"
+                           class="edit-user-input" required>
+                </div>
+
+                <div class="edit-user-form-group">
+                    <label for="password" class="edit-user-label">
+                        Heslo
+                    </label>
+                    <input type="password" id="password" name="password"
+                           class="edit-user-input" required
+                           placeholder="Nové heslo (nechte prázdné, pokud neměníte)">
+                </div>
+
+                <div class="edit-user-actions">
+                    <button type="submit" class="edit-user-submit">
+                        Uložit změny
+                    </button>
+                    <a href="{{ url_for('login.user_list') }}" class="edit-user-back">
+                        Zpět
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

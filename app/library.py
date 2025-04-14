@@ -36,8 +36,7 @@ def addbook():
     Pokud je metoda POST, přidá knihu do databáze.
     Vrací šablonu addbook.html.
     """
-    if 'user_id' not in session:
-        return redirect(url_for('login.login'))
+
     if request.method == 'POST':
         name = request.form['name']
         author = request.form['author']

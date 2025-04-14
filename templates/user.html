@@ -8,22 +8,45 @@
 
 
 
-    <table class="table table-striped">
-        <thead class="thead-dark">
-            <tr>
-                <th>jmeno</th>
-                <th>heslo</th>
-                <th>role</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for user in users %}
-            <tr>
-                <td>{{ user[0] }}</td>
-                <td>{{ user[1] }}</td>
-                <td>{{ user[2] }}</td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+            <table class="table table-hover table-bordered mb-0">
+                <thead class="thead-light">
+                    <tr>
+                        <th class="align-middle" style="width: 25%">Jméno</th>
+                        <th class="align-middle" style="width: 25%">Role</th>
+                        <th class="align-middle text-center" style="width: 30%">Akce</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for user in users %}
+                    <tr>
+                        <td class="align-middle font-weight-bold">{{ user[1] }}</td>
+                        <td class="align-middle">
+                            <span class="badge
+                                {% if user[3] == 'admin' %}badge-danger
+                                {% elif user[3] == 'moderator' %}badge-warning
+                                {% else %}badge-primary
+                                {% endif %}">
+                                {{ user[3] }}
+                            </span>
+                        </td>
+                        <td class="align-middle text-center">
+                            <div class="btn-group" role="group">
+                                <a href="{{ url_for('login.edit_user', user_id=user[0]) }}"
+                                   class="btn btn-sm btn-outline-primary">
+                                   <i class="fas fa-edit"></i> Editovat
+                                </a>
+                                <form action="{{ url_for('login.delete_user', user_id=user[0]) }}" method="POST"
+                                      class="d-inline ml-2">
+                                    <button type="submit"
+                                            class="btn btn-sm btn-outline-danger"
+                                            onclick="return confirm('Opravdu smazat uživatele {{ user[1] }}?')">
+                                        <i class="fas fa-trash-alt"></i> Smazat
+                                    </button>
+                                </form>
+                            </div>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
 {% endblock %}

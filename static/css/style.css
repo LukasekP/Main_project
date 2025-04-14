@@ -236,3 +236,90 @@ input:valid {
         font-size: 1.5rem;
     }
 }
+.edit-user-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    border: none;
+    border-radius: var(--border-radius);
+}
+
+.edit-user-header {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    padding: 1rem;
+}
+
+.edit-user-header h2 {
+    margin: 0;
+    font-weight: 500;
+}
+
+.edit-user-body {
+    padding: 2rem;
+}
+
+.edit-user-form-group {
+    margin-bottom: 1.5rem;
+}
+
+.edit-user-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--secondary-color);
+}
+
+.edit-user-input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.edit-user-input:focus {
+    border-color: var(--accent-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(79, 195, 247, 0.2);
+}
+
+.edit-user-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.edit-user-submit {
+    flex: 1;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition);
+    font-weight: 500;
+}
+
+.edit-user-submit:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+.edit-user-back {
+    flex: 1;
+    display: inline-block;
+    text-align: center;
+    padding: 0.75rem;
+    background-color: #f0f0f0;
+    color: var(--text-color);
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.edit-user-back:hover {
+    background-color: #e0e0e0;
+}
